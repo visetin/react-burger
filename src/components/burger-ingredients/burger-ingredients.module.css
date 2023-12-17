@@ -1,0 +1,48 @@
+.tabs {
+  display: flex;
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.scrollBox {
+  max-height: calc(100% - 156px);
+  overflow: auto;
+}
+
+.tile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 24px;
+  box-sizing: border-box;
+  margin: 0;
+  list-style: none;
+}
+
+.col {
+  width: calc(50% - 12px);
+  box-sizing: border-box;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.cardPriceBox {
+  display: flex;
+  justify-content: center;
+}
+
+.cardImage {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.cardName {
+  text-align: center;
+  min-height: 48px;
+}
