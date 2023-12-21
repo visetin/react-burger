@@ -7,7 +7,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.page-container {
+  max-width: 1280px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.page-layout {
+  display: flex;
+  gap: 0 40px;
+}
+
+.page-layout_cropped {
+  max-height: calc(100vh - 88px);
+  overflow: hidden;
+}
+
+.page-col {
+  width: 50%;
+}
+
+.page-col_cropped {
+  max-height: 100%;
+  overflow: hidden;
 }

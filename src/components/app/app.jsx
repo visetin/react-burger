@@ -3,7 +3,6 @@ import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/box.css';
 import AppHeader from '../app-header/app-header';
 import BurgerIngredients from '../burger-ingredients/burger-ingredients';
 import { ingredientsMockData } from '../../utils/data';
-import './app.css';
 
 const App = () => {
   return (
