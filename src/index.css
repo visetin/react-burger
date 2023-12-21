@@ -23,11 +23,20 @@ body {
   overflow: hidden;
 }
 
-.page-col {
+.page-slot {
   width: 50%;
 }
 
-.page-col_cropped {
+.page-slot_cropped {
   max-height: 100%;
   overflow: hidden;
+}
+
+.page-slot__scroll-box {
+  overflow: hidden;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
