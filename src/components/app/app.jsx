@@ -1,7 +1,7 @@
 import React from 'react';
 import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/common.css';
 import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/box.css';
-import { routs } from '../../lib/consts';
+import { fetchIngredients } from '../../api';
 import Modal from '../modal/modal';
 import AppHeader from '../app-header/app-header';
 import BurgerIngredients from '../burger-ingredients/burger-ingredients';
@@ -16,14 +16,11 @@ const App = () => {
   const [isModalOrderDetailsShown, setModalOrderDetailsShown] = React.useState();
 
   React.useEffect(() => {
-    fetch(routs.ingredientsAPI)
-      .then((res) => {
-        return res.json();
-      })
+    fetchIngredients()
       .then((data) => {
         setIngredients(data.data);
       })
-      .catch((e) => {
+      .catch(() => {
         console.log('Errors occurred when making an API request');
       })
   }, []);

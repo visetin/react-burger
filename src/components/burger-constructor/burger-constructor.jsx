@@ -11,7 +11,7 @@ const makeMockIngredientsList = () => {
   for (let index = 0; index < 8; index += 1) {
     result.push(
       <div className="relative pl-8 pr-2" key={index}>
-        <div className="absolute pos-left pos-middle flex-row">
+        <div className="absolute pos-left pos-middle icon-box">
           <DragIcon type="primary" />
         </div>
 
@@ -64,7 +64,7 @@ const BurgerConstructor = ({
 
       <div className="flex-row flex-jc-end flex-ai-center">
         <span className="text text_type_digits-medium mr-2">610</span>
-        <span className="icon-8 pr-10">
+        <span className="icon-size-8 pr-10">
           <CurrencyIcon type="primary" size="32" />
         </span>
         <Button htmlType="button" type="primary" size="large" onClick={handleSuccessSubmit}>

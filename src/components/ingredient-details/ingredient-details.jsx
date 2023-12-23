@@ -11,7 +11,7 @@ const IngredientDetails = ({
     <section className={`flex-col flex-ai-center pt-4 pb-15`}>
       <img src={ingredient.image_large} alt="" className="img-fluid img-contain mb-15" />
 
-      <p className="text-center text text_type_main-medium mb-8">{ingredient.name}</p>
+      <h2 className="text-center text text_type_main-medium mb-8">{ingredient.name}</h2>
 
       <div className="flex-row gap-x-5">
         <IngredientFormulationsProp title="Калории, ккал" value={ingredient.calories} />
