@@ -1,24 +1,8 @@
-.tabs {
-  display: flex;
-  margin-top: 0;
-  padding: 0;
-  list-style: none;
-}
-
 .main {
   max-height: calc(100% - 96px);
 }
 
-.tile {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px 24px;
-  box-sizing: border-box;
-  margin: 0;
-  list-style: none;
-}
-
-.col {
+.slot {
   width: calc(50% - 12px);
 }
 
@@ -29,9 +13,4 @@
   align-items: center;
   min-height: 208px;
   box-sizing: border-box;
-}
-
-.cardImage {
-  max-width: 100%;
-  object-fit: contain;
 }

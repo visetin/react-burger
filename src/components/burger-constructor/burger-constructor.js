@@ -1,7 +1,6 @@
 import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/common.css';
 import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/box.css';
 import { ConstructorElement, CurrencyIcon, Button } from '@ya.praktikum/react-developer-burger-ui-components';
-import burgerConstructorStyles from './burger-constructor.module.css';
 
 const ELEMENT_TEMP_IMG = 'https://code.s3.yandex.net/react/code/bun-02.png';
 
@@ -25,7 +24,7 @@ const BurgerConstructor = () => {
 
   return (
     <>
-      <div className="flex-column h-100p cropper mb-10">
+      <div className="flex-col h-100p cropper mb-10">
         <ConstructorElement
           type="top"
           isLocked={true}
@@ -35,7 +34,7 @@ const BurgerConstructor = () => {
         />
 
         <div className="scroll custom-scroll h-100p mt-4 mb-4">
-          <div className={burgerConstructorStyles.list}>
+          <div className="flex-col gap-y-4">
             {mockIngredients}
           </div>
         </div>
@@ -49,7 +48,7 @@ const BurgerConstructor = () => {
         />
       </div>
 
-      <div className={burgerConstructorStyles.result}>
+      <div className="flex-row flex-jc-end flex-ai-center">
         <span className="text text_type_digits-medium mr-2">610</span>
         <span className="icon-32 pr-10">
           <CurrencyIcon type="primary" size="32" />

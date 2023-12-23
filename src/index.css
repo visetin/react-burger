@@ -64,6 +64,14 @@ body {
   justify-content: space-between;
 }
 
+.flex-jc-end {
+  justify-content: flex-end;  
+}
+
+.flex-ai-center {
+  align-items: center;
+}
+
 .flex-center {
   justify-content: center;
   align-items: center;
@@ -71,6 +79,10 @@ body {
 
 .gap-2 {
   gap: calc(var(--offset-base-size) * 2);
+}
+
+.gap-y-4 {
+  row-gap: calc(var(--offset-base-size) * 4);
 }
 
 .gap-y-8 {
