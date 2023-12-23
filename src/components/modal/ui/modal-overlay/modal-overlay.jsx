@@ -2,11 +2,11 @@ import modalOverlayStyles from './modal-overlay.module.css';
 
 const ModalOverlay = ({
   children,
-  onClick,
+  handleClick,
 }) => {
 
   return (
-    <div className={modalOverlayStyles.overlay} onClick={onClick}>
+    <div className={modalOverlayStyles.overlay} onClick={handleClick}>
       {children}
     </div>
   )

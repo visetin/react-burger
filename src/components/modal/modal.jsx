@@ -1,3 +1,4 @@
+import React from 'react';
 import ReactDOM from 'react-dom';
 import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/common.css';
 import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/box.css';
@@ -13,10 +14,30 @@ const Modal = ({
   handleClose,
 }) => {
 
+  const handleKeyPress = (e) => {
+    if (e.key !== 'Escape') {
+      return;
+    }
+
+    handleClose();
+  };
+
+  const handleClickBubble = (e) => {
+    e.stopPropagation();
+  };
+
+  React.useEffect(() => {
+    document.addEventListener('keydown', handleKeyPress);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, []);
+
   return ReactDOM.createPortal(
     (
-      <ModalOverlay onClick={handleClose}>
-        <div className={`${modalStyles.window} pt-10 pr-10 pb-15 pl-10 `}>
+      <ModalOverlay handleClick={handleClose}>
+        <div className={`${modalStyles.window} pt-10 pr-10 pb-15 pl-10 `} onClick={handleClickBubble}>
           <div className="flex-row flex-jc-between flex-ai-center">
             {
               title && <h2 className="text text_type_main-large mr-9">{title}</h2>

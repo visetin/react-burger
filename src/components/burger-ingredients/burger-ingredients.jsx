@@ -44,7 +44,7 @@ const BurgerIngredients = ({ ingredients }) => {
                               <CurrencyIcon type="primary" />
                             </div>
 
-                            <h3 className="text text-center text_type_main-default">{ingredient.name}</h3>
+                            <h3 className="text-center text text_type_main-default">{ingredient.name}</h3>
                           </article>
                         </div>
                       )

@@ -26,7 +26,9 @@ const makeMockIngredientsList = () => {
   return result;
 }
 
-const BurgerConstructor = () => {
+const BurgerConstructor = ({
+  handleSuccessSubmit,
+}) => {
   const mockIngredients = makeMockIngredientsList();
 
   return (
@@ -64,7 +66,7 @@ const BurgerConstructor = () => {
         <span className="icon-8 pr-10">
           <CurrencyIcon type="primary" size="32" />
         </span>
-        <Button htmlType="button" type="primary" size="large">
+        <Button htmlType="button" type="primary" size="large" onClick={handleSuccessSubmit}>
           Оформить заказ
         </Button>
       </div>

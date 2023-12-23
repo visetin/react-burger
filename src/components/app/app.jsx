@@ -2,14 +2,15 @@ import React from 'react';
 import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/common.css';
 import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/box.css';
 import { routs } from '../../lib/consts';
+import Modal from '../modal/modal';
 import AppHeader from '../app-header/app-header';
 import BurgerIngredients from '../burger-ingredients/burger-ingredients';
 import BurgerConstructor from '../burger-constructor/burger-constructor';
-import Modal from '../modal/modal';
+import OrderDetails from '../order-details/order-details';
 
 const App = () => {
   const [ingredients, setIngredients] = React.useState([]);
-  const [isModalShown, setModalShown] = React.useState(true);
+  const [isModalOrderDetailsShown, setModalOrderDetailsShown] = React.useState();
 
   React.useEffect(() => {
     fetch(routs.ingredientsAPI)
@@ -52,8 +53,12 @@ const App = () => {
       });
   }, [ingredients]);
 
-  const hideModal = () => {
-    setModalShown(false);
+  const hideModalOrderDetails = () => {
+    setModalOrderDetailsShown(false);
+  };
+
+  const showModalOrderDetails = () => {
+    setModalOrderDetailsShown(true);
   };
 
   return (
@@ -69,12 +74,18 @@ const App = () => {
           </div>
 
           <div className="flex-col pt-25 pb-18 pr-4 pl-4 page__slot">
-            <BurgerConstructor />
+            <BurgerConstructor handleSuccessSubmit={showModalOrderDetails} />
           </div>
         </div>
       </main>
 
-      {isModalShown && <Modal handleClose={hideModal} title="Детали ингредиента" />}
+      {
+        isModalOrderDetailsShown && (
+          <Modal handleClose={hideModalOrderDetails}>
+            <OrderDetails />
+          </Modal>
+        )
+      }
     </>
   )
 };
