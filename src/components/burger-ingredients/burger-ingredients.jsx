@@ -70,7 +70,7 @@ BurgerIngredients.propTypes = {
     category: PropTypes.string.isRequired,
     items: PropTypes.arrayOf(ingredientPropType.isRequired).isRequired,
   })),
-  handleIngredientClick: PropTypes.func.isRequired
+  handleIngredientClick: PropTypes.func.isRequired,
 };
 
 export default BurgerIngredients;

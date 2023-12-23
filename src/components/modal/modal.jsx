@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/common.css';
 import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/box.css';
 import { CloseIcon } from '@ya.praktikum/react-developer-burger-ui-components';
@@ -53,6 +54,11 @@ const Modal = ({
     ),
     portalElement
   )
+};
+
+Modal.propTypes = {
+  title: PropTypes.string,
+  handleClose: PropTypes.func.isRequired,
 };
 
 export default Modal;

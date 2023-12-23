@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import modalOverlayStyles from './modal-overlay.module.css';
 
 const ModalOverlay = ({
@@ -10,6 +11,10 @@ const ModalOverlay = ({
       {children}
     </div>
   )
+};
+
+ModalOverlay.propTypes = {
+  handleClick: PropTypes.func,
 };
 
 export default ModalOverlay;
