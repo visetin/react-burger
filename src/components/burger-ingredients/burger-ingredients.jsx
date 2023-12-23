@@ -3,7 +3,10 @@ import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/box.css';
 import { Tab, Counter, CurrencyIcon } from '@ya.praktikum/react-developer-burger-ui-components';
 import burgerIngredientsStyles from './burger-ingredients.module.css';
 
-const BurgerIngredients = ({ ingredients }) => {
+const BurgerIngredients = ({
+  ingredients,
+  handleIngredientClick,
+}) => {
 
   return (
     <>
@@ -35,7 +38,7 @@ const BurgerIngredients = ({ ingredients }) => {
 
                       return (
                         <div key={ingredient._id} className={burgerIngredientsStyles.slot}>
-                          <article className={`${burgerIngredientsStyles.card} pl-3 pr-3`}>
+                          <article className={`${burgerIngredientsStyles.card} pl-3 pr-3`} onClick={handleIngredientClick} id={ingredient._id}>
                             <Counter count={0} size="default" />
                             <img src={ingredient.image} alt="" className="img-fluid img-contain pl-4 pr-4 mb-1" />
 
