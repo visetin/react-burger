@@ -4,10 +4,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.page-container {
+.container {
   max-width: 1280px;
   box-sizing: border-box;
   margin: 0 auto;
+}
+
+.container_size_lg {
+  max-width: 1360px;
 }
 
 .page-layout {
@@ -28,13 +32,30 @@ body {
   overflow: hidden;
 }
 
-.scroll{
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.scroll {
   overflow: auto;
 }
 
-.flex-column {
+.flex-col {
   display: flex;
   flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-jc-between {
+  justify-content: space-between;
+}
+
+.gap-2 {
+  gap: calc(var(--offset-base-size) * 2);
 }
 
 .h-100p {
@@ -42,7 +63,7 @@ body {
 }
 
 .pb-18 {
-  padding-bottom: 72px;
+  padding-bottom: calc(var(--offset-base-size) * 18);
 }
 
 .mt-auto {

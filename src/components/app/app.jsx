@@ -53,15 +53,15 @@ const App = () => {
   return (
     <>
       <AppHeader />
-      <main className="page-container page-layout cropper page-layout_cropped pl-5 pt-10 pr-5 pb-10">
-        <div className="page-slot flex-column">
+      <main className="container cropper page-layout page-layout_cropped pl-5 pt-10 pr-5 pb-10">
+        <div className="page-slot flex-col">
           <h1 className="text text_type_main-large mb-5">Соберите бургер</h1>
           <div className="cropper h-100p">
             <BurgerIngredients ingredients={categorizedIngredients} />
           </div>
         </div>
 
-        <div className="page-slot flex-column pt-25 pb-18 pr-4 pl-4">
+        <div className="page-slot flex-col pt-25 pb-18 pr-4 pl-4">
           <BurgerConstructor />
         </div>
       </main>
