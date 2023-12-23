@@ -66,7 +66,10 @@ const BurgerIngredients = ({
 };
 
 BurgerIngredients.propTypes = {
-  ingredients: PropTypes.arrayOf(ingredientPropType.isRequired).isRequired,
+  ingredients: PropTypes.arrayOf(PropTypes.shape({
+    category: PropTypes.string.isRequired,
+    items: PropTypes.arrayOf(ingredientPropType.isRequired).isRequired,
+  })),
   handleIngredientClick: PropTypes.func.isRequired
 };
 
