@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import ingredientFormulationsPropStyles from './ingredient-formulations-prop.module.css';
 
 const IngredientFormulationsProp = ({ title, value }) => {
@@ -8,6 +9,11 @@ const IngredientFormulationsProp = ({ title, value }) => {
       <p className="text-center text text_type_digits-default text_color_inactive">{value}</p>
     </div>
   )
+};
+
+IngredientFormulationsProp.propTypes = {
+  title: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
 };
 
 export default IngredientFormulationsProp;

@@ -1,5 +1,6 @@
 import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/common.css';
 import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/box.css';
+import { ingredientPropType } from '../../lib/prop-types';
 import IngredientFormulationsProp from './ui/ingredient-formulations-prop/ingredient-formulations-prop';
 
 const IngredientDetails = ({
@@ -20,6 +21,10 @@ const IngredientDetails = ({
       </div>
     </section>
   )
+};
+
+IngredientDetails.propTypes = {
+  ingredient: ingredientPropType.isRequired,
 };
 
 export default IngredientDetails;
