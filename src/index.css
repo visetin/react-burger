@@ -37,6 +37,12 @@ body {
   color: inherit;
 }
 
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .scroll {
   overflow: auto;
 }
@@ -50,12 +56,29 @@ body {
   display: flex;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .flex-jc-between {
   justify-content: space-between;
 }
 
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
 .gap-2 {
   gap: calc(var(--offset-base-size) * 2);
+}
+
+.gap-y-8 {
+  row-gap: calc(var(--offset-base-size) * 8);
+}
+
+.gap-x-6 {
+  column-gap: calc(var(--offset-base-size) * 6); 
 }
 
 .h-100p {
@@ -72,6 +95,19 @@ body {
 
 .mb-auto {
   margin-bottom: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-contain {
+  object-fit: contain;
 }
 
 .icon-32 > svg {

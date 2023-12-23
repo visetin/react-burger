@@ -7,7 +7,7 @@ const BurgerIngredients = ({ ingredients }) => {
 
   return (
     <>
-      <ul className={`${burgerIngredientsStyles.tabs} mb-10`}>
+      <ul className="list flex-row">
         {
           ingredients.map(({ category }, index) => {
             return (
@@ -21,7 +21,7 @@ const BurgerIngredients = ({ ingredients }) => {
         }
       </ul>
 
-      <div className={`${burgerIngredientsStyles.main} scroll custom-scroll`}>
+      <div className={`${burgerIngredientsStyles.main} scroll custom-scroll mt-10`}>
         {
           ingredients.map(({ category, items }, index) => {
 
@@ -29,22 +29,24 @@ const BurgerIngredients = ({ ingredients }) => {
               <section key={index} className="mb-10">
                 <h2 className="text text_type_main-medium mb-6">{category}</h2>
 
-                <div className={`${burgerIngredientsStyles.tile} pl-1 pr-1`}>
+                <div className="flex-row flex-wrap gap-y-8 gap-x-6 pl-4 pr-4">
                   {
                     items.map((ingredient) => {
 
                       return (
-                        <article key={ingredient._id} className={`${burgerIngredientsStyles.card} ${burgerIngredientsStyles.col} pl-3 pr-3`}>
-                          <Counter count={0} size="default" />
-                          <img src={ingredient.image} alt="" className={`${burgerIngredientsStyles.cardImage} pl-4 pr-4 mb-1`} />
+                        <div key={ingredient._id} className={burgerIngredientsStyles.col}>
+                          <article className={`${burgerIngredientsStyles.card} pl-3 pr-3`}>
+                            <Counter count={0} size="default" />
+                            <img src={ingredient.image} alt="" className="img-fluid img-contain pl-4 pr-4 mb-1" />
 
-                          <div className={`${burgerIngredientsStyles.cardPriceBox} mb-1`}>
-                            <span className="text text_type_digits-default mr-2">{ingredient.price}</span>
-                            <CurrencyIcon type="primary" />
-                          </div>
+                            <div className="flex-row flex-center mb-1">
+                              <span className="text text_type_digits-default mr-2">{ingredient.price}</span>
+                              <CurrencyIcon type="primary" />
+                            </div>
 
-                          <h3 className={`${burgerIngredientsStyles.cardName} text text_type_main-default`}>{ingredient.name}</h3>
-                        </article>
+                            <h3 className="text text-center text_type_main-default">{ingredient.name}</h3>
+                          </article>
+                        </div>
                       )
                     })
                   }
