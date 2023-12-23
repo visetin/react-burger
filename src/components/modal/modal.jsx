@@ -33,6 +33,7 @@ const Modal = ({
     return () => {
       document.removeEventListener('keydown', handleKeyPress);
     };
+    // eslint-disable-next-line 
   }, []);
 
   return ReactDOM.createPortal(
