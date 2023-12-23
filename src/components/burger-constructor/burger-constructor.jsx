@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/common.css';
 import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/box.css';
 import { ConstructorElement, DragIcon, CurrencyIcon, Button } from '@ya.praktikum/react-developer-burger-ui-components';
@@ -72,6 +73,10 @@ const BurgerConstructor = ({
       </div>
     </>
   )
+};
+
+BurgerConstructor.propTypes = {
+  handleSuccessSubmit: PropTypes.func.isRequired
 };
 
 export default BurgerConstructor;
