@@ -1,0 +1,26 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: ;
+}
+
+.topElement {
+  flex-grow: unset;
+  /* margin-bottom: auto; */
+}
+
+.bottomElement {
+  flex-grow: unset;
+  margin-top: auto;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0
+}
+
+.result {
+  display: flex;
+  justify-content: flex-end;
+}

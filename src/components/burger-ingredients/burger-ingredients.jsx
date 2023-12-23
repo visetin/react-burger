@@ -21,7 +21,7 @@ const BurgerIngredients = ({ ingredients }) => {
         }
       </ul>
 
-      <div className={`${burgerIngredientsStyles.scrollBox} custom-scroll`}>
+      <div className={`${burgerIngredientsStyles.main} scroll custom-scroll`}>
         {
           ingredients.map(({ category, items }, index) => {
 

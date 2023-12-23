@@ -5,9 +5,8 @@
   list-style: none;
 }
 
-.scrollBox {
+.main {
   max-height: calc(100% - 96px);
-  overflow: auto;
 }
 
 .tile {
@@ -35,6 +34,7 @@
 .cardPriceBox {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .cardImage {

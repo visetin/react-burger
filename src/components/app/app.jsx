@@ -4,6 +4,7 @@ import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/box.css';
 import { routs } from '../../lib/consts';
 import AppHeader from '../app-header/app-header';
 import BurgerIngredients from '../burger-ingredients/burger-ingredients';
+import BurgerConstructor from '../burger-constructor/burger-constructor';
 
 const App = () => {
   const [ingredients, setIngredients] = React.useState([]);
@@ -52,15 +53,17 @@ const App = () => {
   return (
     <>
       <AppHeader />
-      <main className="page-container page-layout page-layout_cropped pl-5 pt-10 pr-5 pb-10">
-        <div className="page-slot flex-column page-slot_cropped">
+      <main className="page-container page-layout cropper page-layout_cropped pl-5 pt-10 pr-5 pb-10">
+        <div className="page-slot flex-column">
           <h1 className="text text_type_main-large mb-5">Соберите бургер</h1>
-          <div className="page-slot__scroll-box">
+          <div className="cropper h-100p">
             <BurgerIngredients ingredients={categorizedIngredients} />
           </div>
         </div>
 
-        <div className="page-slot flex-column page-slot_cropped">constructor</div>
+        <div className="page-slot flex-column pt-25 pb-18 pr-4 pl-4">
+          <BurgerConstructor />
+        </div>
       </main>
     </>
   )
