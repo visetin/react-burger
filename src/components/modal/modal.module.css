@@ -1,0 +1,7 @@
+.window {
+  width: 100%;
+  max-width: 720px;
+  box-sizing: border-box;
+  background-color: var(--background);
+  border-radius: var(--common-border-radius-s);
+}

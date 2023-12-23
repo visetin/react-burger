@@ -5,9 +5,11 @@ import { routs } from '../../lib/consts';
 import AppHeader from '../app-header/app-header';
 import BurgerIngredients from '../burger-ingredients/burger-ingredients';
 import BurgerConstructor from '../burger-constructor/burger-constructor';
+import Modal from '../modal/modal';
 
 const App = () => {
   const [ingredients, setIngredients] = React.useState([]);
+  const [isModalShown, setModalShown] = React.useState(true);
 
   React.useEffect(() => {
     fetch(routs.ingredientsAPI)
@@ -50,6 +52,10 @@ const App = () => {
       });
   }, [ingredients]);
 
+  const hideModal = () => {
+    setModalShown(false);
+  };
+
   return (
     <>
       <AppHeader />
@@ -67,6 +73,8 @@ const App = () => {
           </div>
         </div>
       </main>
+
+      {isModalShown && <Modal handleClose={hideModal} title="Детали ингредиента" />}
     </>
   )
 };

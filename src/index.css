@@ -81,6 +81,10 @@ body {
   margin-bottom: auto;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
 /* icons */
 .icon-box {
   display: flex;
