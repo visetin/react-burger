@@ -59,17 +59,8 @@ const App = () => {
     setModalIngredientDetailsShown(!isModalIngredientDetailsShown);
   };
 
-  const handleIngredientClick = (e) => {
-    const target = e.currentTarget;
-    const ingredientId = target.id;
-    const targetIngredient = ingredients.find(({ _id }) => {
-      return _id === ingredientId;
-    });
-
-    if (targetIngredient) {
-      setModalIngredientDetailsShown(true);
-    }
-
+  const handleIngredientClick = (targetIngredient) => () => {
+    setModalIngredientDetailsShown(true);
     setIngredient(targetIngredient);
   };
 

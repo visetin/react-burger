@@ -40,7 +40,7 @@ const BurgerIngredients = ({
 
                       return (
                         <div key={ingredient._id} className={burgerIngredientsStyles.slot}>
-                          <article className={`${burgerIngredientsStyles.card} pl-3 pr-3`} onClick={handleIngredientClick} id={ingredient._id}>
+                          <article className={`${burgerIngredientsStyles.card} pl-3 pr-3`} onClick={handleIngredientClick(ingredient)}>
                             <Counter count={0} size="default" />
                             <img src={ingredient.image} alt="" className="img-fluid img-contain pl-4 pr-4 mb-1" />
 
