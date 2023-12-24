@@ -42,7 +42,7 @@ const BurgerIngredients = ({
                         <div key={ingredient._id} className={burgerIngredientsStyles.slot}>
                           <article className={`${burgerIngredientsStyles.card} pl-3 pr-3`} onClick={handleIngredientClick(ingredient)}>
                             <Counter count={0} size="default" />
-                            <img src={ingredient.image} alt="" className="img-fluid img-contain pl-4 pr-4 mb-1" />
+                            <img src={ingredient.image} alt="Ингредиент" className="img-fluid img-contain pl-4 pr-4 mb-1" />
 
                             <div className="flex-row flex-center mb-1">
                               <span className="text text_type_digits-default mr-2">{ingredient.price}</span>

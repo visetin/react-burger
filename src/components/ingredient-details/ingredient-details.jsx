@@ -1,7 +1,7 @@
 import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/common.css';
 import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/box.css';
 import { ingredientPropType } from '../../lib/prop-types';
-import IngredientFormulationsProp from './ui/ingredient-formulations-prop/ingredient-formulations-prop';
+import IngredientDetailsStyles from './ingredient-details.module.css';
 
 const IngredientDetails = ({
   ingredient,
@@ -9,15 +9,27 @@ const IngredientDetails = ({
 
   return (
     <section className={`flex-col flex-ai-center pt-4 pb-15`}>
-      <img src={ingredient.image_large} alt="" className="img-fluid img-contain mb-15" />
+      <img src={ingredient.image_large} alt="Ингредиент" className="img-fluid img-contain mb-15" />
 
       <h2 className="text-center text text_type_main-medium mb-8">{ingredient.name}</h2>
 
       <div className="flex-row gap-x-5">
-        <IngredientFormulationsProp title="Калории, ккал" value={ingredient.calories} />
-        <IngredientFormulationsProp title="Белки, г" value={ingredient.proteins} />
-        <IngredientFormulationsProp title="Жиры, г" value={ingredient.fat} />
-        <IngredientFormulationsProp title="Углеводы, г" value={ingredient.carbohydrates} />
+        <div className={IngredientDetailsStyles.formulationsItem}>
+          <p className="text-center text text_type_main-default text_color_inactive mb-2">Калории, ккал</p>
+          <p className="text-center text text_type_digits-default text_color_inactive">{ingredient.calories}</p>
+        </div>
+        <div className={IngredientDetailsStyles.formulationsItem}>
+          <p className="text-center text text_type_main-default text_color_inactive mb-2">Белки, г</p>
+          <p className="text-center text text_type_digits-default text_color_inactive">{ingredient.proteins}</p>
+        </div>
+        <div className={IngredientDetailsStyles.formulationsItem}>
+          <p className="text-center text text_type_main-default text_color_inactive mb-2">Жиры, г</p>
+          <p className="text-center text text_type_digits-default text_color_inactive">{ingredient.fat}</p>
+        </div>
+        <div className={IngredientDetailsStyles.formulationsItem}>
+          <p className="text-center text text_type_main-default text_color_inactive mb-2">Углеводы, г</p>
+          <p className="text-center text text_type_digits-default text_color_inactive">{ingredient.carbohydrates}</p>
+        </div>
       </div>
     </section>
   )
