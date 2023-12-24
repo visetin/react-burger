@@ -20,9 +20,7 @@ const App = () => {
       .then((data) => {
         setIngredients(data.data);
       })
-      .catch(() => {
-        console.log('Errors occurred when making an API request');
-      })
+      .catch(console.error);
   }, []);
 
   const categorizedIngredients = React.useMemo(() => {
