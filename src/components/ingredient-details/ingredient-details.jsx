@@ -8,7 +8,7 @@ const IngredientDetails = ({
 }) => {
 
   return (
-    <section className={`flex-col flex-ai-center pt-4 pb-15`}>
+    <section className="flex-col flex-ai-center">
       <img src={ingredient.image_large} alt="Ингредиент" className="img-fluid img-contain mb-15" />
 
       <h2 className="text-center text text_type_main-medium mb-8">{ingredient.name}</h2>

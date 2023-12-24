@@ -94,7 +94,7 @@ const App = () => {
         isModalIngredientDetailsShown
         && selectedIngredient
         && (
-          <Modal handleClose={toggleModalIngredientDetails}>
+          <Modal handleClose={toggleModalIngredientDetails} title="Детали ингредиента">
             <IngredientDetails ingredient={selectedIngredient} />
           </Modal>
         )
