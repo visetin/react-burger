@@ -3,34 +3,9 @@ import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/common.css';
 import '@ya.praktikum/react-developer-burger-ui-components/dist/ui/box.css';
 import { ConstructorElement, DragIcon, CurrencyIcon, Button } from '@ya.praktikum/react-developer-burger-ui-components';
 
-const ELEMENT_TEMP_IMG = 'https://code.s3.yandex.net/react/code/bun-02.png';
-
-const makeMockIngredientsList = () => {
-  const result = [];
-
-  for (let index = 0; index < 8; index += 1) {
-    result.push(
-      <div className="relative pl-8 pr-2" key={index}>
-        <div className="absolute pos-left pos-middle icon-box">
-          <DragIcon type="primary" />
-        </div>
-
-        <ConstructorElement
-          text="Краторная булка N-200i"
-          price={50}
-          thumbnail={ELEMENT_TEMP_IMG}
-        />
-      </div>
-    );
-  }
-
-  return result;
-}
-
 const BurgerConstructor = ({
   handleSuccessSubmit,
 }) => {
-  const mockIngredients = makeMockIngredientsList();
 
   return (
     <>
@@ -41,13 +16,83 @@ const BurgerConstructor = ({
             isLocked={true}
             text="Краторная булка N-200i (верх)"
             price={200}
-            thumbnail={ELEMENT_TEMP_IMG}
+            thumbnail="https://code.s3.yandex.net/react/code/bun-02.png"
           />
         </div>
 
         <div className="scroll custom-scroll h-100p mt-4 mb-4">
           <div className="flex-col gap-y-4">
-            {mockIngredients}
+            <div className="relative pl-8 pr-2">
+              <div className="absolute pos-left pos-middle icon-box">
+                <DragIcon type="primary" />
+              </div>
+
+              <ConstructorElement
+                text="Сыр с астероидной плесенью"
+                price={4142}
+                thumbnail="https://code.s3.yandex.net/react/code/cheese.png"
+              />
+            </div>
+
+            <div className="relative pl-8 pr-2">
+              <div className="absolute pos-left pos-middle icon-box">
+                <DragIcon type="primary" />
+              </div>
+
+              <ConstructorElement
+                text="Биокотлета из марсианской Магнолии"
+                price={424}
+                thumbnail="https://code.s3.yandex.net/react/code/meat-01.png"
+              />
+            </div>
+
+            <div className="relative pl-8 pr-2">
+              <div className="absolute pos-left pos-middle icon-box">
+                <DragIcon type="primary" />
+              </div>
+
+              <ConstructorElement
+                text="Хрустящие минеральные кольца"
+                price={300}
+                thumbnail="https://code.s3.yandex.net/react/code/mineral_rings.png"
+              />
+            </div>
+
+            <div className="relative pl-8 pr-2">
+              <div className="absolute pos-left pos-middle icon-box">
+                <DragIcon type="primary" />
+              </div>
+
+              <ConstructorElement
+                text="Соус традиционный галактический"
+                price={15}
+                thumbnail="https://code.s3.yandex.net/react/code/sauce-03.png"
+              />
+            </div>
+
+            <div className="relative pl-8 pr-2">
+              <div className="absolute pos-left pos-middle icon-box">
+                <DragIcon type="primary" />
+              </div>
+
+              <ConstructorElement
+                text="Сыр с астероидной плесенью"
+                price={4142}
+                thumbnail="https://code.s3.yandex.net/react/code/cheese.png"
+              />
+            </div>
+
+            <div className="relative pl-8 pr-2">
+              <div className="absolute pos-left pos-middle icon-box">
+                <DragIcon type="primary" />
+              </div>
+
+              <ConstructorElement
+                text="Соус фирменный Space Sauce"
+                price={80}
+                thumbnail="https://code.s3.yandex.net/react/code/sauce-04.png"
+              />
+            </div>
           </div>
         </div>
 
@@ -55,9 +100,9 @@ const BurgerConstructor = ({
           <ConstructorElement
             type="bottom"
             isLocked={true}
-            text="Краторная булка N-200i (верх)"
+            text="Краторная булка N-200i (низ)"
             price={200}
-            thumbnail={ELEMENT_TEMP_IMG}
+            thumbnail="https://code.s3.yandex.net/react/code/bun-02.png"
           />
         </div>
       </div>
