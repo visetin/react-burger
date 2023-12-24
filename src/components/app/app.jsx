@@ -11,9 +11,9 @@ import IngredientDetails from '../ingredient-details/ingredient-details';
 
 const App = () => {
   const [ingredients, setIngredients] = React.useState([]);
-  const [selectedIngredient, setIngredient] = React.useState();
-  const [isModalIngredientDetailsShown, setModalIngredientDetailsShown] = React.useState();
-  const [isModalOrderDetailsShown, setModalOrderDetailsShown] = React.useState();
+  const [selectedIngredient, setIngredient] = React.useState(null);
+  const [isModalIngredientDetailsShown, setModalIngredientDetailsShown] = React.useState(false);
+  const [isModalOrderDetailsShown, setModalOrderDetailsShown] = React.useState(false);
 
   React.useEffect(() => {
     fetchIngredients()
