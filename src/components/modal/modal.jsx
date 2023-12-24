@@ -15,19 +15,19 @@ const Modal = ({
   handleClose,
 }) => {
 
-  const handleKeyPress = (e) => {
-    if (e.key !== 'Escape') {
-      return;
-    }
-
-    handleClose();
-  };
-
   const handleClickBubble = (e) => {
     e.stopPropagation();
   };
 
   React.useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (e.key !== 'Escape') {
+        return;
+      }
+
+      handleClose();
+    };
+
     document.addEventListener('keydown', handleKeyPress);
 
     return () => {
