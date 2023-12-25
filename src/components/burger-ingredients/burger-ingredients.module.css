@@ -1,0 +1,16 @@
+.main {
+  max-height: calc(100% - 96px);
+}
+
+.slot {
+  width: calc(50% - 12px);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 208px;
+  box-sizing: border-box;
+}
